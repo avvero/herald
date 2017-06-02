@@ -14,9 +14,9 @@ RUN update-alternatives --config java
 
 WORKDIR /tmp
 
-RUN git clone https://github.com/avvero/snitch.git
+RUN git clone https://github.com/avvero/herald.git
 
-WORKDIR snitch
+WORKDIR herald
 
 RUN chmod +x ./gradlew
 

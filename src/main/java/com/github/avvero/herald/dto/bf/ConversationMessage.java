@@ -1,10 +1,9 @@
-package com.github.avvero.snitch.dto.bf;
+package com.github.avvero.herald.dto.bf;
 
-import com.github.avvero.snitch.utils.LocalDateTimeStringDeserialize;
+import com.github.avvero.herald.utils.LocalDateTimeStringDeserialize;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Data;
 

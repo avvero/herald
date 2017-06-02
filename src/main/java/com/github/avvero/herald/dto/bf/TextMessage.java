@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.dto.bf;
+package com.github.avvero.herald.dto.bf;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

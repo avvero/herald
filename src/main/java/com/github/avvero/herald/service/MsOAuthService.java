@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.service;
+package com.github.avvero.herald.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

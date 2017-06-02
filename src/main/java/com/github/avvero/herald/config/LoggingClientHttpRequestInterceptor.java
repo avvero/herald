@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.config;
+package com.github.avvero.herald.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpRequest;

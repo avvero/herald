@@ -1,10 +1,9 @@
-package com.github.avvero.snitch.service;
+package com.github.avvero.herald.service;
 
-import com.github.avvero.snitch.config.LoggingClientHttpRequestInterceptor;
-import com.github.avvero.snitch.dto.bf.ConversationMessage;
+import com.github.avvero.herald.config.LoggingClientHttpRequestInterceptor;
+import com.github.avvero.herald.dto.bf.ConversationMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

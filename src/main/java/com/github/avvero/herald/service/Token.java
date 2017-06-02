@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.service;
+package com.github.avvero.herald.service;
 
 import lombok.Data;
 

@@ -24,17 +24,17 @@ import static ch.qos.logback.classic.Level.WARN
 appender("flow", MarkerSocketAppender) {
     remoteHost = "FLOW-22088A04"
     port = 4561
-    marker = "snitch"
+    marker = "herald"
 }
 
 appender("file", RollingFileAppender) {
-    file = "/var/log/service/snitch/service.log"
+    file = "/var/log/service/herald/service.log"
     encoder(PatternLayoutEncoder) {
         charset = java.nio.charset.StandardCharsets.UTF_8
         pattern = "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %t %c{0}:%M:%L - %m%n"
     }
     rollingPolicy(TimeBasedRollingPolicy) {
-        fileNamePattern = "/var/log/service/snitch/service.log.%d{yyyy-MM-dd}"
+        fileNamePattern = "/var/log/service/herald/service.log.%d{yyyy-MM-dd}"
     }
 }
 

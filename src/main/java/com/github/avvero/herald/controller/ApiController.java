@@ -1,9 +1,9 @@
-package com.github.avvero.snitch.controller;
+package com.github.avvero.herald.controller;
 
-import com.github.avvero.snitch.dto.bf.ConversationAccount;
-import com.github.avvero.snitch.dto.bf.ConversationMessage;
-import com.github.avvero.snitch.dto.bf.TextMessage;
-import com.github.avvero.snitch.service.BotFrameworkService;
+import com.github.avvero.herald.dto.bf.ConversationAccount;
+import com.github.avvero.herald.dto.bf.ConversationMessage;
+import com.github.avvero.herald.dto.bf.TextMessage;
+import com.github.avvero.herald.service.BotFrameworkService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,8 +31,12 @@ public class ApiController {
         echo.setRecipient(message.getFrom());
         echo.setServiceUrl(message.getServiceUrl());
         echo.setType("message");
-        echo.setText("<ss type=\"hi\">(wave)</ss> hi everybody, i'm happy to join this conversation, " +
-                "channel id is " + message.getConversation().getId());
+        if ("message".equals(message.getType())) {
+            echo.setText("<ss type=\"hi\">(wave)</ss> hi everybody, i'm happy to join this conversation, " +
+                    "channel id is " + message.getConversation().getId());
+        } else if ("conversationUpdate".equals(message.getType())) {
+            echo.setText("<ss type=\"hi\">(wave)</ss>");
+        }
         botFrameworkService.send(echo);
         log.info("ENDPOINT END");
     }

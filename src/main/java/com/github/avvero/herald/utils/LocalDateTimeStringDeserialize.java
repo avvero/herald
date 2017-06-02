@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.utils;
+package com.github.avvero.herald.utils;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;

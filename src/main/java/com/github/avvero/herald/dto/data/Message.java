@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.dto.data;
+package com.github.avvero.herald.dto.data;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

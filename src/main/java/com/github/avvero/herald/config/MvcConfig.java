@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.config;
+package com.github.avvero.herald.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

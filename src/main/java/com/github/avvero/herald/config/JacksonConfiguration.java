@@ -1,4 +1,4 @@
-package com.github.avvero.snitch.config;
+package com.github.avvero.herald.config;
 
 import com.fasterxml.jackson.datatype.jsr310.JSR310Module;
 import org.springframework.context.annotation.Bean;
