@@ -32,7 +32,7 @@ public class ApiController {
         echo.setServiceUrl(message.getServiceUrl());
         echo.setType("message");
         if ("message".equals(message.getType())) {
-            echo.setText("<ss type=\"hi\">(wave)</ss> hi everybody, i'm happy to join this conversation, " +
+            echo.setText("hi everybody <ss type=\"hi\">(wave)</ss>, i'm happy to join this conversation, " +
                     "channel id is " + message.getConversation().getId());
         } else if ("conversationUpdate".equals(message.getType())) {
             echo.setText("<ss type=\"hi\">(wave)</ss>");
