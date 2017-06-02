@@ -49,6 +49,7 @@ public class ApiController {
         ConversationMessage echo = new ConversationMessage();
         echo.setConversation(new ConversationAccount(null, conversationId, null));
         echo.setType("message");
+        echo.setServiceUrl(message.getServiceUrl());
         echo.setText(message.getText());
         botFrameworkService.send(echo);
         log.info("ENDPOINT END");
