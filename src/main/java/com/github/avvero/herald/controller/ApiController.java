@@ -41,13 +41,13 @@ public class ApiController {
         log.info("ENDPOINT END");
     }
 
-    @RequestMapping(value = "/say/{conversationId}", method = RequestMethod.POST)
-    public void say(@PathVariable String conversationId, @RequestBody TextMessage message) {
+    @RequestMapping(value = "/say", method = RequestMethod.POST)
+    public void say(@RequestBody TextMessage message) {
         log.info("ENDPOINT START");
         log.info(message.toString());
 
         ConversationMessage echo = new ConversationMessage();
-        echo.setConversation(new ConversationAccount(null, conversationId, null));
+        echo.setConversation(new ConversationAccount(null, message.getConversationId(), null));
         echo.setType("message");
         echo.setServiceUrl(message.getServiceUrl());
         echo.setText(message.getText());

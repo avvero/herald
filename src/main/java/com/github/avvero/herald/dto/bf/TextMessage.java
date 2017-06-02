@@ -12,5 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TextMessage {
     private String serviceUrl;
+    private String conversationId;
     private String text;
 }
