@@ -21,12 +21,6 @@ import static ch.qos.logback.classic.Level.INFO
 import static ch.qos.logback.classic.Level.TRACE
 import static ch.qos.logback.classic.Level.WARN
 
-appender("flow", MarkerSocketAppender) {
-    remoteHost = "FLOW-22088A04"
-    port = 4561
-    marker = "herald"
-}
-
 appender("file", RollingFileAppender) {
     file = "/var/log/service/herald/service.log"
     encoder(PatternLayoutEncoder) {
@@ -46,9 +40,9 @@ appender("stdout", ConsoleAppender) {
     }
 }
 
-logger("org", ERROR, ["flow", "file", "stdout"])
-logger("org.springframework", ERROR, ["flow", "file", "stdout"])
-logger("org.springframework.web", INFO, ["flow", "file", "stdout"])
-logger("org.springframework.web.filter", DEBUG, ["flow", "file", "stdout"])
-logger("com.github.avvero", TRACE, ["flow", "file", "stdout"])
-root(ERROR, ["flow", "file", "stdout"])
+logger("org", ERROR, ["file", "stdout"])
+logger("org.springframework", ERROR, ["file", "stdout"])
+logger("org.springframework.web", INFO, ["file", "stdout"])
+logger("org.springframework.web.filter", DEBUG, ["file", "stdout"])
+logger("com.github.avvero", TRACE, ["file", "stdout"])
+root(ERROR, ["file", "stdout"])
